@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player</title>
+    <link rel="stylesheet" href="index.css">
+    <link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css' rel='stylesheet'>
+</head>
+<body>
+    <div class="player">
+        <div class="wrapper">
+            <!-- Search inputs and button -->
+            <div class="search-container">
+                <input type="text" id="artistSearch" placeholder="Search artist...">
+                <input type="text" id="trackSearch" placeholder="Search track...">
+                <button onclick="search()">Search</button>
+            </div>
+            
+            <!-- Display area for search results -->
+            <div id="searchResults" style="display: none;">
+                <h2>Search Results</h2>
+                <div id="searchedTrackName"></div>
+                <div id="searchedTrackArtist"></div>
+                <button onclick="playSearchedTrack()">Play</button>
+            </div>
+            
+            <!-- Music player details -->
+            <div class="details">
+                <div class="now-playing">PLAYING x OF y</div>
+                <div class="track-art"></div>
+                <div class="track-name">Track Name</div>
+                <div class="track-artist">Track Artist</div>
+            </div>
+
+            <!-- Sliders for seek and volume -->
+            <div class="slider_container">
+                <div class="current-time">00:00</div>
+                <input type="range" min="0" max="100" value="0" class="seek_slider" step="1">
+                <div class="total-duration">00:00</div>
+            </div>
+
+            <div class="slider_container">
+                <i class="fa fa-volume-down"></i>
+                <input type="range" min="0" max="100" value="100" class="volume_slider" step="1">
+                <i class="fa fa-volume-up"></i>
+            </div>
+
+            <!-- Control buttons -->
+            <div class="buttons">
+                <div class="random-track">
+                    <i class="fas fa-random fa-2x" title="random"></i>
+                </div>
+                <div class="prev-track">
+                    <i class="fa fa-step-backward fa-2x"></i>
+                </div>
+                <div class="playpause-track">
+                    <i class="fa fa-play-circle fa-5x"></i>
+                </div>
+                <div class="next-track">
+                    <i class="fa fa-step-forward fa-2x"></i>
+                </div>
+                <div class="repeat-track">
+                    <i class="fa fa-repeat fa-2x" title="repeat"></i>
+                </div>
+            </div>
+
+            <!-- Waveform display -->
+            <div id="wave">
+                <span class="stroke"></span>
+                <span class="stroke"></span>
+                <span class="stroke"></span>
+                <span class="stroke"></span>
+                <span class="stroke"></span>
+                <span class="stroke"></span>
+                <span class="stroke"></span>
+            </div>
+        </div>
+    </div>
+    <audio id="audio-player"></audio>
+    <script src="index.js"></script>
+</body>
+</html>

@@ -30,11 +30,16 @@ Features
 Known Issues
 ----------------
 
-None at the moment. If you encounter any issues, please report them in the issues section of the repository.
+* The music player sometimes crashes when playing multiple tracks in a row.
+* The seek slider can be unresponsive on slower computers.
+* The volume slider does not work in Internet Explorer.
+* The "repeat" feature does not work correctly when playing tracks in random order.
+* The album art does not display correctly for some tracks.
 
 Author
------
-LEMEIN ANETTE
+--------
+
+lemeinannette
 
 Contributing
 --------------
